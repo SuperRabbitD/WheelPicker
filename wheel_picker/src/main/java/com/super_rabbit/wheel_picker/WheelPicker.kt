@@ -871,6 +871,15 @@ class WheelPicker @JvmOverloads constructor(
         return getValue(mCurSelectedItemIndex)
     }
 
+    /**
+     * Gets current selected index
+     *
+     * @return current index which is selected by wheel
+     * */
+    fun getCurrentIndex(): Int {
+        return mCurSelectedItemIndex
+    }
+
     fun isValidPosition(position: Int): Boolean {
         return when {
             mMinValidIndex != null && position < mMinValidIndex!! -> false

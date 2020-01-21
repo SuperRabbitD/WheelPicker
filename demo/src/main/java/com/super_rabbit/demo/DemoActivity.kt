@@ -2,6 +2,7 @@ package com.super_rabbit.demo
 
 import android.graphics.Typeface
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import com.super_rabbit.demo.wheel_picker_adapters.WPDayPickerAdapter
@@ -94,6 +95,9 @@ class DemoActivity : AppCompatActivity() {
 
             numberPicker.setTypeface(currentTypeFace)
             numberPicker.reset()
+        }
+        get_selected.setOnClickListener {
+            Toast.makeText(context, "index=${numberPicker.getCurrentIndex()}, text=${numberPicker.getCurrentItem()}", Toast.LENGTH_SHORT).show()
         }
     }
 }
