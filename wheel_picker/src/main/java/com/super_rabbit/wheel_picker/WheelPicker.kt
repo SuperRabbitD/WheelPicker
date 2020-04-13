@@ -716,7 +716,7 @@ class WheelPicker @JvmOverloads constructor(
     }
 
     fun setUnselectedTextColor(resourceId: Int) {
-        mUnSelectedTextColor = resourceId
+        mUnSelectedTextColor = ContextCompat.getColor(context, resourceId)
     }
 
     /**
@@ -869,6 +869,15 @@ class WheelPicker @JvmOverloads constructor(
 
     fun getCurrentItem(): String {
         return getValue(mCurSelectedItemIndex)
+    }
+
+    /**
+     * Gets current selected index
+     *
+     * @return current index which is selected by wheel
+     * */
+    fun getCurrentIndex(): Int {
+        return mCurSelectedItemIndex
     }
 
     fun isValidPosition(position: Int): Boolean {
