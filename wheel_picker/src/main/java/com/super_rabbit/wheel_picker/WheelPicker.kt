@@ -716,7 +716,7 @@ class WheelPicker @JvmOverloads constructor(
     }
 
     fun setUnselectedTextColor(resourceId: Int) {
-        mUnSelectedTextColor = resourceId
+        mUnSelectedTextColor = ContextCompat.getColor(context, resourceId)
     }
 
     /**
